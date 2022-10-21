@@ -1,0 +1,58 @@
+.messages{
+	overflow: auto;
+	height: 400px;
+}
+
+.controls{
+	padding-top: 5px;
+}
+
+.input {
+  padding: 19px 15px;
+}
+
+.input:active {
+  border-color: #008eaa;
+}
+
+.button {
+  padding: 20px 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 0px;
+    font-weight: 600;
+    width: 200px;
+    color: white;
+    background: #008eaa;
+  }
+
+  .button:hover {
+    color: white;
+  }
+  
+  .button[disabled]{
+    padding: 20px 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 0px;
+    font-weight: 600;
+    width: 200px;
+    color: white;
+    background: #2c92a7;
+
+}
+
+.fades-leave-to {
+  transition: opacity .5s
+}
+
+.slide-fade-enter-active {
+  transition: all .8s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to{
+  transform: translateX(10px);
+  opacity: 0;
+}

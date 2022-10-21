@@ -1,0 +1,23 @@
+{
+  "name": "vuejs-socketio-chat",
+  "version": "1.0.0",
+  "description": "Chat geral para uso do projeto de TCC Auxilium",
+  "author": "Andriele Aschidamini",
+  "main": "server.js",
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "express",
+    "vuejs",
+    "socketio"
+  ],
+  "dependencies": {
+    "bulma": "^0.5.1",
+    "dateformat": "^2.0.0",
+    "express": "^4.15.4",
+    "font-awesome": "^4.7.0",
+    "serve-favicon": "^2.4.3",
+    "socket.io": "^2.0.3",
+    "vue": "^2.4.2"
+  }
+}
