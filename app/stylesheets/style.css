@@ -94,7 +94,7 @@ button.btn {
   justify-content: space-between;
   background: #fff;
   border-radius: 8px;
-  width: 70%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -121,6 +121,11 @@ button.btn {
 }
 .onlineIcon {
   margin-right: 10%;
+}
+
+.users {
+  font-size: 10px;
+  float: left;
 }
 
 .messages {
