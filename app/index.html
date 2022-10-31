@@ -1,50 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Chat App</title>
-    <link rel="stylesheet" href="npm/bulma/css/bulma.css">
-    <link rel="stylesheet" href="npm/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+    <link rel="stylesheet" href="npm/bulma/css/bulma.css" />
+    <link rel="stylesheet" href="npm/font-awesome/css/font-awesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
 
-<body>
+  <body>
     <div id="app" class="container">
-        <br>
-        <!-- Chat Box goes here -->
-        <div class="columns"> 
-            <div class="column is-two-thirds">
-                
-                <!-- inputs user name -->
-                <transition name="fade">
-                    <input-name v-bind:is-logged="isLogged" v-on:set-name="setName"></input-name> 
-                </transition>
-                
-                <!-- message list -->
-                <transition name="slide-fade">
-                    <div class="box" v-show="isLogged">
-                        <div class="messages">
-                            <ul>
-                                <li v-for="message in messages">
-                                    <message v-bind:message-data="message"></message>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- inputs new message -->                
-                        <input-message v-on:send-message="sendMessage"></input-message>
-                    </div>  
-                </transition>
-            </div>
-            
-            <!-- user list -->
-            <div class="column">
+      <br />
+      <!-- Chat Box goes here -->
+      <div class="chat">
+        <div class="chat-container">
+          <!-- inputs user name -->
+          <transition name="fade">
+            <input-name
+              v-bind:is-logged="isLogged"
+              v-on:set-name="setName"
+            ></input-name>
+          </transition>
+
+          <!-- message list -->
+          <transition name="slide-fade">
+            <div class="content-logget" v-show="isLogged">
+              <!-- user list -->
+              <div class="users">
                 <users v-bind:users="users"></users>
-            </div>  
-        </div> 
-    </div>   
+              </div>
+              <div class="container-chat-box">
+                <div class="info-bar">
+                  <div class="left-inner-container">
+                    <div>
+                      <img
+                        alt="online"
+                        src="../images/onlineIcon.png"
+                        class="onlineIcon"
+                      />
+                    </div>
+                    <div>
+                      <h3>{{userName}}</h3>
+                    </div>
+                  </div>
+                  <div class="right-inner-container">
+                    <a href="/">
+                      <img
+                        alt="online"
+                        src="../images/closeIcon.png"
+                        class="closeIcon"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="messages">
+                  <ul>
+                    <li v-for="message in messages">
+                      <message v-bind:message-data="message"></message>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- inputs new message -->
+                <input-message v-on:send-message="sendMessage"></input-message>
+              </div>
+            </div>
+          </transition>
+        </div>
+      </div>
+    </div>
 
     <script src="npm/vue/dist/vue.js"></script>
     <script src="npm/socket.io-client/dist/socket.io.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

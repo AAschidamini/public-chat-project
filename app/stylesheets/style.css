@@ -1,4 +1,4 @@
-.messages{
+/* .messages{
 	overflow: auto;
 	height: 400px;
 }
@@ -41,18 +41,138 @@
     background: #2c92a7;
 
 }
+*/
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ececec;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.form-join {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.form-join h1 {
+  color: #2c3e50;
+  font-size: 2.5em;
+  border-bottom: 2px solid #2c3e50;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+input.joinInput {
+  border-radius: 0;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+button.btn {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #008eaa;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* Chat box */
+.container-chat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 8px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-bar {
+  background: #008eaa;
+  border-radius: 4px 4px 0 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.left-inner-container {
+  display: flex;
+  margin-left: 10px;
+  color: #fff;
+}
+.left-inner-container h3 {
+  margin-left: 10px;
+  font-weight: 600;
+}
+.onlineIcon {
+  margin-right: 10%;
+}
+
+.messages {
+  padding: 5% 0;
+  overflow: auto;
+  flex: auto;
+  height: 300px;
+}
+
+.media-content {
+  border-radius: 20px;
+  padding: 5px 20px;
+  display: inline-block;
+  max-width: 80%;
+  background: #f3f3f3;
+  margin: 10px;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 2px solid #d3d3d3;
+}
+.chat-input input {
+  border: none;
+  border-radius: 0;
+  padding: 5%;
+  width: 80%;
+  font-size: 1.2em;
+}
+.chat-input button {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #008eaa;
+  padding: 20px;
+  display: inline-block;
+  border: none;
+  width: 20%;
+}
 
 .fades-leave-to {
-  transition: opacity .5s
+  transition: opacity 0.5s;
 }
 
 .slide-fade-enter-active {
-  transition: all .8s ease;
+  transition: all 0.8s ease;
 }
 .slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.slide-fade-enter, .slide-fade-leave-to{
+.slide-fade-enter,
+.slide-fade-leave-to {
   transform: translateX(10px);
   opacity: 0;
 }
