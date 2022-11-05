@@ -1,23 +1,26 @@
 ## Orientações de instalação
 
-- O que é:
-
-  Chat com resposta em tempo real, desenvolvido em NodeJS, Vue.js e Socket.io.
-
-- Instalação:
+### Instalação:
 
 Clone o repositório e rode o comando:
 
-#npm install
+```
+npm install
+```
 
 Depois de instalar as dependências do Node, poderá rodar o projeto usando o comando:
 
-#node server.js
+```
+node server.js
+```
 
-- Build
+### Build
 
 Para realizar o build, rode o comando:
 
-#npm run build
+```
+npm run build
+```
 
-##Link da DEMO: https://public-chat-auxilium.herokuapp.com/
+### Link da DEMO: 
+https://public-chat-auxilium.herokuapp.com/
