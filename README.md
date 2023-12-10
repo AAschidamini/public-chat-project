@@ -21,6 +21,3 @@ Para realizar o build, rode o comando:
 ```
 npm run build
 ```
-
-### Link da DEMO: 
-https://public-chat-auxilium.herokuapp.com/
